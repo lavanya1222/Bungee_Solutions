@@ -1,0 +1,7 @@
+url = "https://raw.githubusercontent.com/Bungeetech/internship-test2/master/input/question-3/main.csv"
+
+df = pd.read_csv(url)
+#df = df.sort_values(by = ['Red Cards', 'Yellow Cards'], ascending = [True, True], na_position = 'first')
+df = df[['Team','Yellow Cards','Red Cards']]
+df = df.sort_values(by = ['Red Cards', 'Yellow Cards'], ascending = [False, False])
+print(df)
