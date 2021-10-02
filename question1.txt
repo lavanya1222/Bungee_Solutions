@@ -1,0 +1,11 @@
+#Question-1
+
+import csv
+import pandas as pd
+import io
+
+url = "https://raw.githubusercontent.com/Bungeetech/internship-test2/master/input/question-1/main.csv"
+df = pd.read_csv(url)
+#df.groupby((df.index.year//10)*10).sum()
+df = df.groupby((df["Year"]//10)*10).sum()
+print(df)
